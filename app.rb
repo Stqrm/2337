@@ -21,3 +21,7 @@ end
 get '/visit' do
 	erb :visit
 end
+
+post '/visit' do
+	"OK!"
+  end
