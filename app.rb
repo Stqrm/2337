@@ -23,5 +23,12 @@ get '/visit' do
 end
 
 post '/visit' do
-	"OK!"
+	@email = params[:email]
+
+	@title = 'Thank you!'
+
+	f = File.open "./public/users.txt", "a"
+    f.write "Email:#{@email}\n"
+    f.close
+    erb :message
   end
